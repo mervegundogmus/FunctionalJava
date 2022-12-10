@@ -12,5 +12,8 @@ public class Chapter2Video3 {
                 addThree = (x, y, z) -> x+y+z;
         System.out.println(addThree.apply(54, 3, 4));
 
+        NoArgFunction<String> sayHello = () -> "Hello";
+        System.out.println(sayHello.apply());
+
     }
 }
