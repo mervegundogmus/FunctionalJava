@@ -59,10 +59,31 @@ public class Chapter3Challenge1 {
 
         List<String> peopleNames = people
                 .stream()
-                .map(person -> person.name)
+                .map((person) -> person.name)
                 .collect(Collectors.toList());
 
         System.out.println(peopleNames);
+
+        Car[] carsArr = {
+                new Car("Chevy", "red", 45000f),
+                new Car("Ford", "blue", 23000f),
+                new Car("Toyota", "grey", 14000f),
+                new Car("Lamborghini", "blue", 160000f),
+                new Car("Renault", "blue", 150000f),
+        };
+
+        List<Car> cars = new ArrayList<>(Arrays.asList(carsArr));
+
+        // Answer 2 goes here
+
+        List<Car> blueCars = cars
+                .stream()
+                .filter((car) -> car.color == "blue")
+                .collect(Collectors.toList());
+
+        System.out.println(blueCars);
+
+
     }
 
 }
